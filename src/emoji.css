@@ -1,0 +1,78 @@
+img.chromoji, #chromoji {
+	background-color: transparent !important;
+    border-style: none !important;
+    display: inline !important;
+    left: 0 !important;
+    margin: 0em !important;
+    max-height: 64px !important;
+    max-width: 64px !important;
+    padding: 0em !important;
+    position: relative !important;
+    opacity: 1 !important;
+    outline-style: none !important;
+    resize: none !important;
+    top: 0.125em !important;
+    z-index: inherit !important;
+    -webkit-perspective: none !important;
+
+    float: none !important;
+    visibility: inherit !important;
+
+    /* removed because of Twitter compose */
+    /* visibility: visible !important; */
+
+}
+
+span.chromoji-font, #chromoji-font {
+    /* "Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji",
+      "Segoe UI Symbol","Android Emoji","EmojiSymbols" */
+    /* font-family: "Apple Color Emoji", "Segoe UI Symbol", "Symbola" !important; */
+    font-family: "Segoe UI Emoji", "Segoe UI Symbol",
+                 "Symbola", "EmojiSymbols" !important;
+}
+
+.chromoji-bg {
+    display: inline-block !important;
+    width: 1em !important;
+    height: 1em !important;
+    background-size: 100% !important;
+    color: transparent !important;
+    /*text-indent: -99999px;*/
+}
+
+@font-face {
+  font-family: "Symbola";
+  src: url("chrome-extension://__MSG_@@extension_id__/font/Symbola.ttf");
+}
+
+/* Emoji Symbols Font (c)blockworks - Kenichi Kaneko http://emojisymbols.com/ */
+/*
+@font-face {
+  font-family: "EmojiSymbols";
+  src: url("chrome-extension://__MSG_@@extension_id__/font/EmojiSymbols-Regular.woff");
+}
+*/
+
+
+@-webkit-keyframes flashinginput {
+   0%, 100% {
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.8);
+      border: 1px solid rgba(102, 175, 233, 1);
+      background-color:rgb(251, 255, 255);
+   }
+
+   50% {
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.3);
+      border: 1px solid rgba(102, 175, 233, .5);
+      background-color:rgb(255, 255, 255);
+   }
+}
+
+.flashinginput {
+   border: 1px solid #66afe9 !important;
+   outline:0;
+   -webkit-animation-name: flashinginput;
+   -webkit-animation-duration: 1.2s;
+   -webkit-animation-timing-function: ease;
+   -webkit-animation-iteration-count: infinite;
+}

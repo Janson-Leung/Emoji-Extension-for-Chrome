@@ -1,0 +1,38 @@
+{
+   "background": {
+      "scripts": [ "src/background.js" ]
+   },
+   "content_scripts": [ {
+      "css": [ "src/emoji.css" ],
+      "js": [ "src/chardict.js", "src/emoji.js" ],
+      "matches": [ "\u003Call_urls\u003E" ],
+      "run_at": "document_start",
+      "all_frames": true
+   }, {
+      "js": [ "src/emoji_insert.js" ],
+      "matches": [ "\u003Call_urls\u003E" ],
+      "run_at": "document_end",
+      "all_frames": true
+   } ],
+   "default_locale": "en_GB",
+   "description": "__MSG_desc__",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "browser_action": {
+      "default_icon": { 
+        "19": "icons/icon19.png",
+        "38": "icons/icon38.png"
+       },
+      "default_popup": "popup/popup.html",
+      "default_title": "iEmoji"
+   },
+   "manifest_version": 2,
+   "name": "__MSG_extName__",
+   "options_page": "options/options.html",
+   "version": "1.0",
+   "permissions": [ "http://*/", "https://*/", "clipboardWrite", "storage" ],
+   "web_accessible_resources": [ "images/*.png", "font/Symbola.ttf", "font/EmojiSymbols-Regular.woff" ]
+}
