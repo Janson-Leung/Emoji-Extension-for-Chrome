@@ -16,8 +16,12 @@ It adds the Mac OS X style emoji font symbols to Google Chrome for Windows
 
 
 ----------
-![表情截屏][2]  
-     ↓
+![表情截屏][2] 
+
+
+----------
+
+
 ![编码截屏][3]
 
 
